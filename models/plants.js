@@ -7,6 +7,10 @@ var plantsSchema = new Schema({
         required: true,
         unique: true
     },
+    finnishName: {
+        type: String,
+        unique: true
+    },
     diameter: {
         type: Number,
         required: true
@@ -15,11 +19,11 @@ var plantsSchema = new Schema({
         type: Number,
         required: true
     },
-    temperatureMin: {
+    tempMin: {
         type: Number,
         required: true
     },
-    temperatureMax: {
+    tempMax: {
         type: Number,
         required: true
     },

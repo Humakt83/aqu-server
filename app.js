@@ -53,4 +53,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+require('./dbinsert/plantsInserter')();
+
 module.exports = app;
