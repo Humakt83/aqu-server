@@ -1,0 +1,29 @@
+{
+  "name": "aqu-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humakt83/aqu-server.git"
+  },
+  "keywords": [
+    "aquarium"
+  ],
+  "author": "Risto <Humakt83>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Humakt83/aqu-server/issues"
+  },
+  "homepage": "https://github.com/Humakt83/aqu-server#readme"
+}
