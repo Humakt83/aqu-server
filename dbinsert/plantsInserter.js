@@ -12,6 +12,7 @@ function Plant(scientificName, finnishName, diameter, height, phMin, phMax, dhMi
     this.dhMax = dhMax;
     this.tempMin = tempMin;
     this.tempMax = tempMax;
+    this.id
 }
 
 var plantsArray = [
@@ -46,9 +47,10 @@ var plantsArray = [
     ];
 
 module.exports = function() {
-    plantsArray.forEach(function(plant, plants, index) {
+    plantsArray.forEach(function(plant) {
+        plant.identificationNumber = plantsArray.indexOf(plant) + 1;
         var document = {$setOnInsert: JSON.parse(JSON.stringify(plant))};
-        var query = {'scientificName': plant.scientificName };
+        var query = {'identificationNumber': plant.identificationNumber };
         Plants.findOneAndUpdate(query, document, {upsert:true}, function(err, doc) {
             if (err) console.error(err);
             else console.log("succesfully saved plants");

@@ -2,6 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var plantsSchema = new Schema({
+    identificationNumber: {
+        type: Number,
+        unique: true,
+        required: true
+    },
     scientificName: {
         type: String,
         required: true,
