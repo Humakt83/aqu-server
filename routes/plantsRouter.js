@@ -7,9 +7,20 @@ plantsRouter.use(bodyParser.json());
 
 plantsRouter.route('/')
 .get(function(req,res,next) {
-    Plants.find({}, function (err, leader) {
+    Plants.find({}, function (err, plants) {
         if (err) throw err;
-        res.json(leader);
+        res.json(plants);
+    });
+})
+plantsRouter.route('/lite')
+.get(function(req,res,next) {
+    Plants.find({}, function (err, plants) {
+        if (err) throw err;
+        var lite = [];
+        plants.forEach(function(plant) {
+            lite.push({'scientificName': plant.scientificName, 'diameter': plant.diameter, 'height': plant.height, 'identificationNumber': plant.identificationNumber})
+        });
+        res.json(lite);
     });
 })
 

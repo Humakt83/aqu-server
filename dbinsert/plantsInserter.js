@@ -1,19 +1,6 @@
 var mongoose = require('mongoose');
 var Plants = require('../models/plants');
-
-function Plant(scientificName, finnishName, diameter, height, phMin, phMax, dhMin, dhMax, tempMin, tempMax) {
-    this.scientificName = scientificName;
-    this.finnishName = finnishName;
-    this.diameter = diameter;
-    this.height = height;
-    this.phMin = phMin;
-    this.phMax = phMax;
-    this.dhMin = dhMin;
-    this.dhMax = dhMax;
-    this.tempMin = tempMin;
-    this.tempMax = tempMax;
-    this.id
-}
+var Plant = require('../models/plant');
 
 var plantsArray = [
         new Plant('Crinum calamistratum', 'Kiharakriinumi', 15, 10, 5.8, 7.5, 2, 12, 23, 26),

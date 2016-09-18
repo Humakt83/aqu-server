@@ -51,7 +51,6 @@ var plantsSchema = new Schema({
     }
 });
 
-
 var Plants = mongoose.model('Plants', plantsSchema);
 
 module.exports = Plants;
