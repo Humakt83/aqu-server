@@ -4,10 +4,10 @@ Provides REST end point for querying plants from the database.
 
 Example responses:
 
-/plants
+#####/plants
 [{"_id":"57de6c47ba9681f980b23644","identificationNumber":1,"tempMax":26,"tempMin":23,"dhMax":12,"phMax":7.5,"phMin":5.8,"height":10,"diameter":15,"finnishName":"Kiharakriinumi","scientificName":"Crinum calamistratum","__v":0,"dhMin":2}]
 
-/plants/lite
+#####/plants/lite
 [{"scientificName":"Crinum calamistratum","diameter":15,"height":10,"identificationNumber":1}]
 
 
